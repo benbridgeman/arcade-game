@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background: #221f2e;
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 300;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    /*background: #ffffff94;*/
+    position: absolute;
+}
