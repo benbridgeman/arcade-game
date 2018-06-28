@@ -1,6 +1,16 @@
 frontend-nanodegree-arcade-game
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+### Running the game
+Upon opening the page the game will start:
+* gameRunning variable is set to true.
+* the 'keyup' event listener will then become active (disabled on 'death').
+* the releaseEnemies function will create a default of 8 enemy objects with random speed and location along the x axis calling the enemySpeed() and randomX() functions respectively, populating the allEnemies array.
+* the player object is created.
+* use the up, down, left & right arrow keys to control the player. Try to navigate between enemies to reach the pond.
+* upon reaching the pond the score indicator at the top will increase by one point, and will reset the player to the starting location.
+* if an enemy is hit the game will end (player loacation is reset, enemies freeze in place, gameRunning is set to false, disabling the 'keyup' event/control functionality) displaying a pop-up score screen displaying the number of times you reached the pond without colliding with an enemy, a click event listener is enabled to reset the game (disabled on restart until next 'death'). After clicking to restart the allEnemies array is emptied to be repopulated with new objects and the game will start again.
+    
+### References
+I used a very helpful guide on MDN regarding 2D collision detection: https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
