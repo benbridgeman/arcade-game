@@ -43,13 +43,15 @@ class Enemy {
       finalScore.textContent = score.textContent;
       // Displays the end score panel
       endPanel.classList.remove("hidden");
-      endPanel.addEventListener("click", function() {
+      // Adds click function
+      endPanel.addEventListener("click", function restartGame() {
         allEnemies = [];
         releaseEnemies(allEnemies, numEnemies);
         setTimeout(function() {
           endPanel.classList.add("hidden");
           gameRunning = true;
         }, 500);
+        endPanel.removeEventListener("click", restartGame);
       });
       // Reset score
       score.textContent = 0;
