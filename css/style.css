@@ -4,6 +4,7 @@ body {
     color: #fff;
     font-family: 'Amatic SC', cursive;
     font-weight: 300;
+    margin: 0;
 }
 
 .menu {
@@ -11,4 +12,24 @@ body {
     height: 100%;
     /*background: #ffffff94;*/
     position: absolute;
+}
+
+.end-panel {
+    background: #ffffffd0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    font-size: 2em;
+    transition: 0.5s ease;
+    opacity: 1;
+}
+
+.hidden {
+    transition: 0.5s ease;
+    opacity: 0;
 }
