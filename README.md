@@ -3,6 +3,7 @@ frontend-nanodegree-arcade-game
 
 ### Running the game
 Upon opening the page the game will start:
+
 * gameRunning variable is set to true.
 * the 'keyup' event listener will then become active (disabled on 'death').
 * the releaseEnemies function will create a default of 8 enemy objects with random speed and location along the x axis calling the enemySpeed() and randomX() functions respectively, populating the allEnemies array.
